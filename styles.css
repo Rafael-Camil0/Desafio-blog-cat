@@ -14,6 +14,9 @@
   --black-300:#121214;
   font-family: "Mulish", sans-serif;
 }
+body{
+  overflow-x: hidden;
+}
 body,html,input,p,h1,h2{
   font-family: "Mulish", sans-serif;
   line-height: 1.6;
@@ -28,6 +31,9 @@ body,html,input,p,h1,h2{
 .page header{
   width: 100vw;
   background-color: var(--purple--500);
+  --start: -100%;
+  animation: move 1s;
+
 }
 
  nav input{
@@ -112,8 +118,10 @@ main .post .content > p {
  margin-bottom: 3.2rem;
 }
 .posts-wrapper .mini-post{
+  --delay:3s;
   display: flex;
   gap: 1.6rem;
+  animation: appear var(--delay);
 
   
 } 
@@ -130,6 +138,7 @@ main .post .content > p {
 }
 
 footer{
+  --start: 100%;
   margin-top:4.8rem ;
   min-height:5.5rem ;
   width: 100%;
@@ -138,12 +147,27 @@ footer{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  animation: move 1s;
 }
 footer p {
 
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--white);
+}
+@keyframes move{
+  from{
+    transform: translateY(var(--start));
+  }
+}
+@keyframes appear {
+  0%{
+    transform: translateX(200%);
+  }
+  100%{
+    transform: translateX(0)
+  }
+  
 }
 
 @media(min-width: 700px){
