@@ -98,6 +98,8 @@ nav input:focus{
 }
 .post .content .button{
   margin-bottom: 3.2rem;
+ 
+  
 }
 .post .content .button button{
     background-color: var(--purple--500);
@@ -182,18 +184,26 @@ footer p {
   }
   .post .content{
     height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin-bottom: 0;
   }
   .post .content h1{
-    display: inline ;
+    
     margin-bottom: 31px;
+    flex: 1;
   }
   .post .content .button {
-    display: inline ;
-    margin-left: 352px;
+    
+   flex: 1;
+   justify-items: flex-end;
+   display: flex;
+   justify-content: end;
+    /* margin-left: 352px; */
   }
   .post .content p{
+   
     padding-top:31px ;
     font-size: 16px;
   }
@@ -227,6 +237,9 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+ .mini-post img{
+    max-width:15.1rem
   }
   .posts-wrapper h1{
     max-height: 32px;
